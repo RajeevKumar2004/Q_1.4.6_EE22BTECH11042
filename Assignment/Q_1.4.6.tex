@@ -213,52 +213,44 @@
 Verify that$$\angle{BOC} = 2\angle{BAC}$$.
 
 \section{Solution}
-\vspace{0.5cm}
-Given,$$\vec{A}=\myvec{1\\-1}
-\hspace{0.25cm}
-\vec{B}=\myvec{-4\\6}
-\hspace{0.25cm}
+Given,$$\vec{A}=\myvec{1\\-1}, 
+\vec{B}=\myvec{-4\\6}, 
 \vec{C}=\myvec{-3\\-5}$$
 Also,we have a point $\vec{O}=\myvec{\frac{-53}{12}\\\\\frac{5}{12}}$ 
 which is intersection point of the perpendicular bisectors of AB and AC and is circumcentre of the triangle made by points A,B and C.
-\vspace{0.25cm}
 \begin{enumerate}
 	\item To find  the value of $\angle{BOC}$ :
 \begin{align}
 \Vec{B}-\Vec{O}
           &=\myvec{\frac{5}{12}\\\\\frac{67}{12}}
 \end{align}
-\vspace{0.1cm}
 \begin{align}
 \Vec{C}-\Vec{O}
           &=\myvec{\frac{17}{12}\\\\\frac{-65}{12}}
 \end{align}
-\vspace{0.1cm}
 calculating the norm of $\Vec{\Vec{B}-\Vec{O}}$ and $\Vec{\Vec{C}-\Vec{O}}$,we get:
 \begin{align}
 	\norm{\Vec{B}-\Vec{O}}&= \frac{\sqrt{4514}}{12}\\
 	\norm{\Vec{C}-\Vec{O}}&= \frac{\sqrt{4514}}{12}
 \end{align}
-\vspace{0.2cm}
 by doing matrix multiplication, we get:
 \begin{align}
 \brak{\Vec{B}-\Vec{O}}^{\top}\brak{\Vec{C}-\Vec{O}}&=\frac{-4270}{144}
 \end{align}
-\vspace{0.2cm}
 to calcuate the $\angle{BOC}$:
 \begin{align}
-\cos{O}&=\frac{\brak{\Vec{B}-\Vec{O}}^{\top}\brak{\Vec{C}-\Vec{O}}}{\norm{\Vec{B}-\Vec{O}}\norm{\Vec{C}-\Vec{O}}}\\
+\cos{BOC}&=\frac{\brak{\Vec{B}-\Vec{O}}^{\top}\brak{\Vec{C}-\Vec{O}}}{\norm{\Vec{B}-\Vec{O}}\norm{\Vec{C}-\Vec{O}}}\\
 &=\frac{\frac{-4270}{144}}{\frac{\sqrt{4514}}{12}\times\frac{\sqrt{4514}}{12}}\\
 &=\frac{-4270}{4514}
 \end{align}
-\vspace{0.1cm}
 \begin{align}
-&\implies\angle{O}=\cos^{-1}\brak{\frac{-4270}{4514}}=161.07536^{\circ}\\
-&\implies\angle{BOC}=360^{\circ}-\angle{O}=198.92464^{\circ}
+&\implies\angle{BOC}=\cos^{-1}\brak{\frac{-4270}{4514}}=161.07536^{\degree}\\
 \end{align}
-\vspace{0.4cm}
-Therefore $\angle{BOC}=198.92464^{\circ}$
-\vspace{0.25cm}
+Taking the reflex of above angle,we get:
+\begin{align}
+\angle{BOC}=360^{\degree}-161.07536^{\degree}=198.92464^{\degree}
+\end{align}
+Therefore $\angle{BOC}=198.92464^{\degree}$
 
 
 
@@ -270,38 +262,31 @@ Therefore $\angle{BOC}=198.92464^{\circ}$
 \Vec{B}-\Vec{A}
          & =\myvec{-5\\7}
 \end{align}
-\vspace{0.1cm}
 \begin{align}
 \Vec{C}-\Vec{A}
           &=\myvec{-4\\-4}
 \end{align}
-\vspace{0.1cm}
 calculating the norm of $\Vec{\Vec{B}-\Vec{A}}$ and $\Vec{\Vec{C}-\Vec{A}}$,we get:
 \begin{align}
 	\norm{\Vec{B}-\Vec{A}}&= \sqrt{74}\\
 	\norm{\Vec{C}-\Vec{A}}&= 4\sqrt{2}
 \end{align}
-\vspace{0.2cm}
 by doing matrix multiplication, we get:
 \begin{align}
 \brak{\Vec{B}-\Vec{A}}^{\top}\brak{\Vec{C}-\Vec{A}}&=-8
 \end{align}
-\vspace{0.2cm}
 to calcuate the $\angle{BAC}$:
 \begin{align}
-	\cos{A}&=\frac{\brak{\Vec{B}-\Vec{A}}^{\top}\brak{\Vec{C}-\Vec{A}}}{\norm{\Vec{B}-\Vec{A}}\norm{\Vec{C}-\Vec{A}}}\\
+	\cos{BAC}&=\frac{\brak{\Vec{B}-\Vec{A}}^{\top}\brak{\Vec{C}-\Vec{A}}}{\norm{\Vec{B}-\Vec{A}}\norm{\Vec{C}-\Vec{A}}}\\
 &=\frac{-8}{\sqrt{74}\times4\sqrt{2}}\\
 &=\frac{-8}{4\sqrt{148}}
 \end{align}
-\vspace{0.1cm}
 \begin{align}
-&\implies\angle{A}=\cos^{-1}\brak{\frac{-8}{4\sqrt{148}}}\\
-&\implies\angle{A}=\angle{BAC}=99.46232^{\circ}
+&\implies\angle{BAC}=\cos^{-1}\brak{\frac{-8}{4\sqrt{148}}}\\
+&\implies\angle{BAC}=99.46232^{\degree}
 \end{align}
-\vspace{0.4cm}
-Therefore $\angle{BAC}=99.46232^{\circ}$.\\
-\vspace{0.5cm}
-As we can see,$$2\times\angle{BAC}=198.92464^{\circ} $$\\Therefore, $$\angle{BOC}=2\times\angle{BAC}$$\\
+Therefore $\angle{BAC}=99.46232^{\degree}$.\\
+As we can see,$$2\times\angle{BAC}=198.92464^{\degree} $$\\Therefore, $$\angle{BOC}=2\times\angle{BAC}$$\\
 Hence,verified.
 
 \end{enumerate}
