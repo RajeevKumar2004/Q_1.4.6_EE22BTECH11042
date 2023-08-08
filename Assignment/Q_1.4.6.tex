@@ -212,21 +212,27 @@
 \section{Question 1.4.6}
 Verify that$$\angle{BOC} = 2\angle{BAC}$$.
 
-\section{Solution}
+\solution
 Given,$$\vec{A}=\myvec{1\\-1}, 
 \vec{B}=\myvec{-4\\6}, 
 \vec{C}=\myvec{-3\\-5}$$
-Also,we have a point $\vec{O}=\myvec{\frac{-53}{12}\\\\\frac{5}{12}}$ 
-which is intersection point of the perpendicular bisectors of AB and AC and is circumcentre of the triangle made by points A,B and C.
+Also,we have a point $\vec{O}=\myvec{\frac{-53}{12}\\\frac{5}{12}}$ 
+which is intersection point of the perpendicular bisectors of AB and AC and is circumcentre of the triangle made by points A,B and C.\\
+
 \begin{enumerate}
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{plot.png}
+\caption{Plot of circumcentre O and points A, B and C.}
+\end{figure}
 	\item To find  the value of $\angle{BOC}$ :
 \begin{align}
 \Vec{B}-\Vec{O}
-          &=\myvec{\frac{5}{12}\\\\\frac{67}{12}}
+          &=\myvec{\frac{5}{12}\\\frac{67}{12}}
 \end{align}
 \begin{align}
 \Vec{C}-\Vec{O}
-          &=\myvec{\frac{17}{12}\\\\\frac{-65}{12}}
+          &=\myvec{\frac{17}{12}\\\frac{-65}{12}}
 \end{align}
 calculating the norm of $\Vec{\Vec{B}-\Vec{O}}$ and $\Vec{\Vec{C}-\Vec{O}}$,we get:
 \begin{align}
@@ -241,10 +247,9 @@ to calcuate the $\angle{BOC}$:
 \begin{align}
 \cos{BOC}&=\frac{\brak{\Vec{B}-\Vec{O}}^{\top}\brak{\Vec{C}-\Vec{O}}}{\norm{\Vec{B}-\Vec{O}}\norm{\Vec{C}-\Vec{O}}}\\
 &=\frac{\frac{-4270}{144}}{\frac{\sqrt{4514}}{12}\times\frac{\sqrt{4514}}{12}}\\
-&=\frac{-4270}{4514}
-\end{align}
-\begin{align}
-&\implies\angle{BOC}=\cos^{-1}\brak{\frac{-4270}{4514}}=161.07536^{\degree}\\
+&=\frac{-4270}{4514}\\
+&\implies\angle{BOC}=\cos^{-1}\brak{\frac{-4270}{4514}}\\
+&\implies\angle{BOC}=161.07536^{\degree}
 \end{align}
 Taking the reflex of above angle,we get:
 \begin{align}
@@ -279,9 +284,7 @@ to calcuate the $\angle{BAC}$:
 \begin{align}
 	\cos{BAC}&=\frac{\brak{\Vec{B}-\Vec{A}}^{\top}\brak{\Vec{C}-\Vec{A}}}{\norm{\Vec{B}-\Vec{A}}\norm{\Vec{C}-\Vec{A}}}\\
 &=\frac{-8}{\sqrt{74}\times4\sqrt{2}}\\
-&=\frac{-8}{4\sqrt{148}}
-\end{align}
-\begin{align}
+&=\frac{-8}{4\sqrt{148}}\\
 &\implies\angle{BAC}=\cos^{-1}\brak{\frac{-8}{4\sqrt{148}}}\\
 &\implies\angle{BAC}=99.46232^{\degree}
 \end{align}
