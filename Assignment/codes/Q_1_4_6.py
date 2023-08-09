@@ -24,3 +24,62 @@ if angle_BOC == 2 * angle_BAC:
   print("\nangle BOC = 2 times angle BAC\nHence the give statement is correct")
 else:
   print("\nangle BOC ≠ 2 times angle BAC\nHence the given statement is wrong")
+import sys                                        
+sys.path.insert(0, '/home/peter/math/codes/CoordGeo')
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+from line.funcs import *
+from triangle.funcs import *
+from conics.funcs import circ_gen
+import subprocess
+import shlex
+#end if
+
+O = np.array([-53/12, 5/12])
+A = np.array([1, -1])
+B = np.array([-3, -5])
+C = np.array([-4, 6])
+
+#Generating all lines
+x_AB = line_gen(A,B)
+x_AC = line_gen(A,C)
+x_OB = line_gen(O,B)
+x_OC = line_gen(O,C)
+
+#Generating the circumcircle
+[O,R] = ccircle(A,B,C)
+x_circ= circ_gen(O,R)
+
+#Plotting all lines
+plt.plot(x_AB[0,:],x_AB[1,:],label='$AB$')
+plt.plot(x_AC[0,:],x_AC[1,:],label='$BC$')
+plt.plot(x_OB[0,:],x_OB[1,:],label='$OB$')
+plt.plot(x_OC[0,:],x_OC[1,:],label='$OB$')
+#Plotting the circumcircle
+plt.plot(x_circ[0,:],x_circ[1,:],label='$circumcircle$')
+
+
+#Labeling the coordinates
+tri_coords = np.vstack((A,B,C,O)).T
+plt.scatter(tri_coords[0,:], tri_coords[1,:])
+vert_labels = ['O','A','C','B','I']
+for i, txt in enumerate(vert_labels):
+    plt.annotate(txt, 
+                 (tri_coords[0,i-1], tri_coords[1,i-1]),
+                 textcoords="offset points", 
+                 xytext=(0,10), 
+                 ha='center')
+
+plt.xlabel('$x$')
+plt.ylabel('$y$')
+plt.legend(loc='best')
+plt.grid() 
+plt.axis('equal')
+plt.savefig('plot.png')
+
+
+
+
+
+
+
